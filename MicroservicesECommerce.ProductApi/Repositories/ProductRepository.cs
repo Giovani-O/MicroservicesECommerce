@@ -37,6 +37,7 @@ public class ProductRepository : IProductRepository
         return product;
     }
 
+    // O Id que chega aqui está errado
     public async Task<Product> Delete(int id)
     {
         var product = await GetById(id);
