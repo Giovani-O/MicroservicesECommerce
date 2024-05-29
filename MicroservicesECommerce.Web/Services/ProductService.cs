@@ -8,7 +8,7 @@ namespace MicroservicesECommerce.Web.Services;
 public class ProductService : IProductService
 {
     private readonly IHttpClientFactory _clientFactory;
-    private const string apiEndpoint = "/api/products";
+    private const string apiEndpoint = "/api/Products/";
     private readonly JsonSerializerOptions _options;
     private ProductViewModel productVM;
     private IEnumerable<ProductViewModel> productsVM;
@@ -35,7 +35,7 @@ public class ProductService : IProductService
             {
                 return null;
             }
-            return (ProductViewModel)productsVM;
+            return (ProductViewModel)productVM;
         }
     }
 
@@ -114,6 +114,6 @@ public class ProductService : IProductService
                 return true;
             }
         }
-        return false;   
+        return false;
     }
 }
